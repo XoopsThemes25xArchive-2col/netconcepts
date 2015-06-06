@@ -1,0 +1,120 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<{$xoops_langcode}>" lang="<{$xoops_langcode}>">
+<head>
+<title><{if $xoops_pagetitle != ''}><{$xoops_pagetitle}> - <{/if}><{$xoops_sitename}></title>
+<meta http-equiv="content-type" content="text/html; charset=<{$xoops_charset}>" />
+<meta http-equiv="content-language" content="<{$xoops_langcode}>" />
+<meta name="robots" content="<{$xoops_meta_robots}>" />
+<meta name="keywords" content="<{$xoops_meta_keywords}>" />
+<meta name="description" content="<{$xoops_meta_description}>" />
+<meta name="rating" content="<{$xoops_meta_rating}>" />
+<meta name="author" content="<{$xoops_meta_author}>" />
+<meta name="copyright" content="<{$xoops_meta_copyright}>" />
+<meta name="generator" content="XOOPS" />
+<title><{$xoops_sitename}> - <{$xoops_pagetitle}></title>
+<link href="<{$xoops_url}>/favicon.ico" rel="SHORTCUT ICON" />
+<link rel="stylesheet" type="text/css" media="screen" href="<{$xoops_url}>/xoops.css" />
+<link rel="stylesheet" type="text/css" media="screen" href="<{$xoops_themecss}>" />
+<link rel="stylesheet" type="text/css" media="print,handheld" href="<{$xoops_url}>/themes/gourmetbryggeriet/print.css"  />
+<link rel="alternate" type="application/rss+xml" title="Netconcept.org" href="http://www.netconcept.org/backend.php" />
+<!-- RMV: added module header -->
+<{$xoops_module_header}>
+<script type="text/javascript">
+<!--
+<{$xoops_js}>
+//-->
+</script>
+<script type="text/javascript" src="<{$xoops_url}>/themes/gourmetbryggeriet/nifty.js"></script>
+<script type="text/javascript" src="<{$xoops_url}>/themes/gourmetbryggeriet/niftygb.js"></script>
+</head>
+<body>
+<div id="wrap">
+	<div id="logo">
+		<h1>Netconcept.org</h1>
+			<div id="userinfo">
+<!--
+				<form method="get" id="searchform" action="http://www.gourmetbryggeriet.dk/">
+					<div>
+						<input type="text" value="" name="s" id="s" />
+						<input type="submit" id="searchsubmit" value="S&oslash;g" alt="Indtast s&oslash;geord" />
+					</div>
+				</form>
+-->
+					<input class="searchbox" type="text" name="searchword" size="12" value="Recherche..."  onblur="if(this.value=='') this.value='Recherche...';" onfocus="if(this.value=='Recherche...') this.value='';" /><input type="hidden" name="option" value="search" /> 
+			</div>
+		<div id="menu">
+			<ul>
+				<li><a href="<{$xoops_url}>"  id="active">Accueil</a></li>
+				<li><a href="<{$xoops_url}>" >Solutions</a></li>
+				<li><a href="<{$xoops_url}>" >Portfolio</a></li>
+				<li><a href="<{$xoops_url}>" >Templates</a></li>
+				<li><a href="<{$xoops_url}>/modules/contact/" >Contact</a></li>
+				<li><a href="<{$xoops_url}>/user.php/" >Acc&egrave;s clients</a></li>
+			</ul>
+		</div>
+	</div>
+	<div id="subbar">
+	<{if $SCRIPT_NAME =='/netconcept/user.php'}>
+		<div id="submenu">
+			<ul>
+				<{if $xoops_isadmin}>
+					<li class="page_item"><a href="<{$xoops_url}>/admin.php"><{$block.lang_adminmenu}></a></li>
+					<li class="page_item"><a href="<{$xoops_url}>/user.php"><{$block.lang_youraccount}></a></li>
+				<{else}>
+					<li class="page_item"><a href="<{$xoops_url}>/user.php"><{$block.lang_youraccount}></a></li>
+				<{/if}>
+					<li class="page_item">><a href="<{$xoops_url}>/edituser.php"><{$block.lang_editaccount}></a></li>
+				<li class="page_item"><a href="<{$xoops_url}>/notifications.php"><{$block.lang_notifications}></a></li>
+					<{if $block.new_messages > 0}>
+						<li class="page_item"><a class="highlight" href="<{$xoops_url}>/viewpmsg.php"><{$block.lang_inbox}> (<span style="color:#ff0000; font-weight: bold;"><{$block.new_messages}></span>)</a></li>
+					<{else}>
+						<li class="page_item"><a href="<{$xoops_url}>/viewpmsg.php"><{$block.lang_inbox}></a></li>
+					<{/if}>
+				<li class="page_item">><a href="<{$xoops_url}>/user.php?op=logout"><{$block.lang_logout}></a></li>
+			</ul>
+	<{/if}>
+		</div>
+	<div id="content">
+		<{if $xoops_showcblock == 1}>
+			<!-- Start center-center blocks loop -->
+			<{foreach item=block from=$xoops_ccblocks}>
+				<h2><{$block.title}></h2>
+				<div class="manchet" style="padding-bottom:10px;width:600px;">
+					<{$block.content}>
+				</div>
+			<{/foreach}>
+			<!-- End center-center blocks loop -->
+		<{/if}>
+		<{if $xoBlocks.page_bottomleft or $xoBlocks.page_bottomright or $xoBlocks.page_bottomcenter}>
+			<div id="cols">
+				<div id="col1">
+					<{foreach from=$xoBlocks.page_bottomleft item=block}>
+						<div>
+							<h3><{$block.title}></h3><{$block.content}>
+						</div>
+					<{/foreach}>
+					<!-- End center-left blocks loop -->
+				</div>
+				<div id="col2">
+					<{foreach from=$xoBlocks.page_bottomcenter item=block}>
+						<div>
+							<h3><{$block.title}></h3><{$block.content}>
+						</div>
+					<{/foreach}>
+				</div>
+				<div id="col3">
+					<{foreach from=$xoBlocks.page_bottomright item=block}>
+						<div>
+							<h3><{$block.title}></h3><{$block.content}>
+	 					</div>
+					<{/foreach}>
+				</div>
+			</div>
+			<p>&nbsp;</p>
+		<{/if}>
+		<{$xoops_contents}>
+		<div class="footer"><{$xoops_footer}></div>
+	</div>
+</div>
+</body>
+</html>

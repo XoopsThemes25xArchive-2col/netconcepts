@@ -1,0 +1,18 @@
+html{width:100%;}
+img{border:0;}
+body{background:#fff;text-align:left;color:#000;font-size:11pt !important;line-height:150%;border:0;margin:0;padding:0;font-family:"lucida grande","trebuchet ms",tahoma,verdana,arial,helvetica,sans-serif;text-align:justify;}
+.menu,.submenu,#subcontact img,form,#breadcrumb,.skiplink,h1,#content .notforprint,#subcontact h3,.tagspace,.blogbox,.postmetadata,#respond,.print,.readmore,#menu,#submenu{display:none;}
+h2{font-size:1.4em !important;}
+#subcontact{text-align:center;line-height:0.7em;}
+#content img.border{padding:5px;}
+#content .left{margin:0.5em 12px 4px 0;float:left;}
+#content .imgright,#content .productright{margin:0.5em 0 4px 8px;float:right;padding:5px;}
+#content .figure{float: right;margin: .5em 0 6px 20px;font-size: 92%;text-align: center;}
+#content .grey{color:#999999;}
+#top{height:8em;}
+#contactinfo{float:right;text-align:right;padding:0 0.5em 0 0;}
+#top img{float:left;margin:0;padding:0.5em 0.5em 0.5em 0.5em;}
+#content{margin:0.5em 0 1.5em 0;}
+#subcontact h4{padding:0;margin:0;}
+a:link, a:visited, a:active, a:hover, a:visited{text-decoration:none;color:#000;}
+#frontpagefeed{display : none;}
